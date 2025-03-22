@@ -6,11 +6,16 @@ import { cartActions } from "../store";
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((store) => store.cart.cart);
+  const cartLength = cart.reduce((sum, item) => sum + item.quantity, 0);
   console.log(cart);
 
   return (
     <div className="app-cart">
-      <h2>Your Shopping Cart</h2>
+      {cartLength ? (
+        <h2>Your Shopping Cart</h2>
+      ) : (
+        <h2>Shopping Cart is empty !!</h2>
+      )}
       {cart.map((cartItem) => (
         <>
           <div key={cartItem.id} className="cart-inner">
