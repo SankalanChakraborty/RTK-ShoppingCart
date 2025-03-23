@@ -3,9 +3,10 @@
 .app-cart{
     width: 500px;
     padding: 15px;
-    background-color: #232222;
+    margin-top: 20px;
+    background-color: #1c1c1c;
     border-radius: 4px;
-    border: 1px solid white;
+
 }
 
 .app-cart h2{
@@ -55,7 +56,7 @@ em{
     transition: all 0.3s ease-in-out;
 }
 
-button:hover{
+.actionbtns button:hover{
     background-color: black;
     border: none;
 

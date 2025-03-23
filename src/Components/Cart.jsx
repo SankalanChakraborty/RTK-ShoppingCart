@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cart.css";
 import { useDispatch, useSelector } from "react-redux";
-import { cartActions } from "../store";
+import { cartActions } from "../store/cart";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ const Cart = () => {
         <>
           <div key={cartItem.id} className="cart-inner">
             <div className="upper">
-              <span>{cartItem.productName}</span>
+              <span>{cartItem.name}</span>
               <span>
                 ₹{cartItem.price * cartItem.quantity}{" "}
                 <em>{"₹" + cartItem.price + " / item"}</em>

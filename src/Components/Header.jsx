@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
-import { hideActions } from "../store";
+import { hideActions } from "../store/hide";
 
 const Header = () => {
   const dispatch = useDispatch();
