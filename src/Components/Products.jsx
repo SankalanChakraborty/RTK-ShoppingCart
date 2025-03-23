@@ -11,17 +11,18 @@ const Products = ({ item }) => {
     "
     >
       <div className="product-up">
-        <span>{item.name}</span>
-        <button className="price-btn">{"₹" + item.price}</button>
+        <img src={item.images} alt="" />
+        <span>{item.title}</span>
+        <button className="price-btn">{"₹" + Math.round(item.price)}</button>
       </div>
-      <div className="product-desc">This is the first product.</div>
+      <div className="product-desc">{item.description}</div>
       <button
         className="add-to-cart"
         onClick={() => {
           dispatch(
             cartActions.addItem({
               id: item.id,
-              name: item.name,
+              title: item.title,
               price: item.price,
               quantity: 1,
             })

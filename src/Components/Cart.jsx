@@ -20,10 +20,10 @@ const Cart = () => {
         <>
           <div key={cartItem.id} className="cart-inner">
             <div className="upper">
-              <span>{cartItem.name}</span>
+              <span>{cartItem.title}</span>
               <span>
-                ₹{cartItem.price * cartItem.quantity}{" "}
-                <em>{"₹" + cartItem.price + " / item"}</em>
+                ₹{Math.round(cartItem.price) * cartItem.quantity}{" "}
+                <em>{"₹" + Math.round(cartItem.price) + " / item"}</em>
               </span>
             </div>
             <div className="lower">
