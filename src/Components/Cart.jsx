@@ -31,14 +31,14 @@ const Cart = () => {
               <div className="actionbtns">
                 <button
                   onClick={() => {
-                    dispatch(cartActions.addItem(cartItem.id));
+                    dispatch(cartActions.addItem(cartItem));
                   }}
                 >
                   +
                 </button>
                 <button
                   onClick={() => {
-                    dispatch(cartActions.removeItem(cartItem.id));
+                    dispatch(cartActions.removeItem(cartItem));
                   }}
                 >
                   -
